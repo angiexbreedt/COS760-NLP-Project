@@ -47,3 +47,72 @@ Using the **SemRel dataset**, we evaluate:
 ---
 
 ## 📁 Project Structure
+
+COS760Project/
+│
+├── data/ # Dataset files
+├── src/ # Core code
+│ ├── data_loader.py
+│ ├── models.py
+│ ├── train.py
+│ ├── evaluate.py
+│ └── augment.py
+│
+├── notebooks/ # Experiments & exploration
+├── results/ # Outputs, metrics, plots
+└── README.md
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the repo
+
+git clone https://github.com/YOUR-USERNAME/COS760-NLP-Project.git
+
+cd COS760-NLP-Project
+
+### 2. Create virtual environment
+
+python -m venv venv
+source venv/bin/activate # Linux/Mac
+venv\Scripts\activate # Windows
+
+### 3. Install dependencies
+
+pip install -r requirements.txt
+
+---
+
+## 🚀 Quick Start (Baseline)
+Run baseline semantic similarity using pretrained embeddings:
+
+python src/baseline.py
+
+---
+
+## 🧪 Experiments
+- Baseline (no training)
+- Fine-tuned models
+- Cross-lingual evaluation
+- Data augmentation experiments
+
+---
+
+## ⚠️ Challenges
+- Limited data for some languages
+- Translation quality for augmentation
+- Computational constraints
+
+---
+
+## 📚 References
+- SemRel Dataset (SemEval 2024)
+- Sentence-BERT
+- XLM-R
+- AfriBERTa
+
+
+
+
+
