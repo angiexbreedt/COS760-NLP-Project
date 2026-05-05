@@ -1,1 +1,5 @@
 experiment_id,model,model_variant,language,split,spearman_rho,mse,augmented,notes
+BL-1-eng,cosine_baseline,paraphrase-multilingual-mpnet-base-v2,English,test,0.8048,0.0352,False,No fine-tuning. Cosine similarity on sentence embeddings.
+BL-1-afr,cosine_baseline,paraphrase-multilingual-mpnet-base-v2,Afrikaans,test,0.7646,0.0263,False,No fine-tuning. Cosine similarity on sentence embeddings.
+BL-1-hau,cosine_baseline,paraphrase-multilingual-mpnet-base-v2,Hausa,test,0.3175,0.1346,False,No fine-tuning. Cosine similarity on sentence embeddings.
+BL-1-kin,cosine_baseline,paraphrase-multilingual-mpnet-base-v2,Kinyarwanda,test,0.3617,0.1426,False,No fine-tuning. Cosine similarity on sentence embeddings.
