@@ -35,7 +35,7 @@ cos760_group16/
 
 ## Dataset
 
-All data comes from the [SemRel2024 dataset](https://huggingface.co/datasets/SemRel2024) 
+All data comes from the [SemRel2024 dataset](https://huggingface.co/datasets/SemRel/SemRel2024)
 (Abdulmumin et al., 2024), downloaded from Hugging Face.
 
 | Language    | Code | Train | Dev | Test |
