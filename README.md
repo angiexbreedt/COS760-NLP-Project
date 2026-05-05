@@ -1,7 +1,46 @@
 # COS760 Group 16 — Semantic Relatedness Project
 **Evaluating Cross-Lingual Transfer and Data Augmentation for Semantic Relatedness in Afrikaans, Hausa and Kinyarwanda**
 
-Angelique Breedt · Christopher Yoko · Resego Morei — University of Pretoria, 2026
+### 👥 Team Members
+- Angelique Breedt (u23542838)
+- Christopher Yoko (u22857941)
+- Resego Morei (u20570326)
+
+---
+
+## 📌 Project Overview
+Semantic relatedness measures how meaningfully connected two pieces of text are. This project investigates how well NLP models capture semantic relatedness in low-resource African languages.
+
+We focus on:
+- Afrikaans
+- Hausa
+- Kinyarwanda
+
+Using the **SemRel dataset**, we evaluate:
+- Cross-lingual transfer (train on English → test on African languages)
+- Multilingual vs African-specific models
+- Impact of data augmentation
+---
+
+
+## 🎯 Research Questions
+1. How well do models trained on English transfer to African languages?
+2. How do multilingual models compare to African-focused models?
+3. Does data augmentation improve performance in low-resource settings?
+
+---
+
+## 🧠 Methods
+- Sentence embeddings (Sentence-BERT, XLM-R, AfriBERTa)
+- Cosine similarity for semantic relatedness
+- Fine-tuning on English and multilingual data
+- Data augmentation (back-translation, paraphrasing)
+
+---
+
+## 📊 Evaluation Metrics
+- Spearman Correlation (primary)
+- Mean Squared Error (MSE)
 
 ---
 
@@ -87,105 +126,6 @@ python src/augment.py --lang kin --quality_threshold 0.75
 All results are logged to `results/results_log.csv` automatically. 
 See the final report (`report/`) for the full results table and analysis.
 
-## References
-
-Abdulmumin, I., et al. (2024). SemRel: A collection of semantic textual 
-relatedness datasets for 13 languages. In *Proceedings of ACL 2024*.
-
-Conneau, A., et al. (2020). Unsupervised cross-lingual representation 
-learning at scale. In *Proceedings of ACL 2020*.
-
-Alabi, J., et al. (2022). Adapting pretrained language models to African 
-languages via multilingual adaptive fine-tuning. In *Proceedings of COLING 2022*.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
----
----
-
-# --------------------------------OLD README--------------------------------
-
-
-
-# COS760 NLP Project – Group 16
-
-## Semantic Relatedness in African Languages
-Evaluating Cross-Lingual Transfer and Data Augmentation for Afrikaans, Hausa, and Kinyarwanda
-
-### 👥 Team Members
-- Angelique Breedt (u23542838)
-- Christopher Yoko (u22857941)
-- Resego Morei (u20570326)
-
----
-
-## 📌 Project Overview
-Semantic relatedness measures how meaningfully connected two pieces of text are. This project investigates how well NLP models capture semantic relatedness in low-resource African languages.
-
-We focus on:
-- Afrikaans
-- Hausa
-- Kinyarwanda
-
-Using the **SemRel dataset**, we evaluate:
-- Cross-lingual transfer (train on English → test on African languages)
-- Multilingual vs African-specific models
-- Impact of data augmentation
-
----
-
-## 🎯 Research Questions
-1. How well do models trained on English transfer to African languages?
-2. How do multilingual models compare to African-focused models?
-3. Does data augmentation improve performance in low-resource settings?
-
----
-
-## 🧠 Methods
-- Sentence embeddings (Sentence-BERT, XLM-R, AfriBERTa)
-- Cosine similarity for semantic relatedness
-- Fine-tuning on English and multilingual data
-- Data augmentation (back-translation, paraphrasing)
-
----
-
-## 📊 Evaluation Metrics
-- Spearman Correlation (primary)
-- Mean Squared Error (MSE)
-
----
-
-## 📁 Project Structure
-
-COS760Project/
-│
-├── data/ # Dataset files
-├── src/ # Core code
-│ ├── data_loader.py
-│ ├── models.py
-│ ├── train.py
-│ ├── evaluate.py
-│ └── augment.py
-│
-├── notebooks/ # Experiments & exploration
-├── results/ # Outputs, metrics, plots
-└── README.md
-
 ---
 
 ## ⚙️ Setup Instructions
@@ -230,13 +170,16 @@ python src/baseline.py
 
 ---
 
-## 📚 References
-- SemRel Dataset (SemEval 2024)
-- Sentence-BERT
-- XLM-R
-- AfriBERTa
+## References
 
+Abdulmumin, I., et al. (2024). SemRel: A collection of semantic textual 
+relatedness datasets for 13 languages. In *Proceedings of ACL 2024*.
 
+Conneau, A., et al. (2020). Unsupervised cross-lingual representation 
+learning at scale. In *Proceedings of ACL 2020*.
+
+Alabi, J., et al. (2022). Adapting pretrained language models to African 
+languages via multilingual adaptive fine-tuning. In *Proceedings of COLING 2022*.
 
 
 
