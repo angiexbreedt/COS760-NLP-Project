@@ -1,0 +1,99 @@
+{
+  "afr": {
+    "language": "Afrikaans",
+    "splits": {
+      "dev": {
+        "rows": 375,
+        "label_min": 0.06,
+        "label_max": 1.0,
+        "label_mean": 0.5008,
+        "label_std": 0.2337
+      },
+      "test": {
+        "rows": 375,
+        "label_min": 0.03,
+        "label_max": 0.97,
+        "label_mean": 0.4993,
+        "label_std": 0.2337
+      }
+    }
+  },
+  "eng": {
+    "language": "English",
+    "splits": {
+      "dev": {
+        "rows": 250,
+        "label_min": 0.19,
+        "label_max": 0.91,
+        "label_mean": 0.5073,
+        "label_std": 0.1529
+      },
+      "train": {
+        "rows": 5500,
+        "label_min": 0.0,
+        "label_max": 1.0,
+        "label_mean": 0.5001,
+        "label_std": 0.2213
+      },
+      "test": {
+        "rows": 2600,
+        "label_min": 0.12,
+        "label_max": 0.97,
+        "label_mean": 0.5166,
+        "label_std": 0.17
+      }
+    }
+  },
+  "hau": {
+    "language": "Hausa",
+    "splits": {
+      "dev": {
+        "rows": 212,
+        "label_min": 0.0,
+        "label_max": 1.0,
+        "label_mean": 0.4947,
+        "label_std": 0.2662
+      },
+      "train": {
+        "rows": 1736,
+        "label_min": 0.0,
+        "label_max": 1.0,
+        "label_mean": 0.4955,
+        "label_std": 0.2667
+      },
+      "test": {
+        "rows": 603,
+        "label_min": 0.0,
+        "label_max": 1.0,
+        "label_mean": 0.4962,
+        "label_std": 0.2686
+      }
+    }
+  },
+  "kin": {
+    "language": "Kinyarwanda",
+    "splits": {
+      "dev": {
+        "rows": 102,
+        "label_min": 0.0,
+        "label_max": 1.0,
+        "label_mean": 0.5,
+        "label_std": 0.2604
+      },
+      "train": {
+        "rows": 778,
+        "label_min": 0.09,
+        "label_max": 0.97,
+        "label_mean": 0.4998,
+        "label_std": 0.199
+      },
+      "test": {
+        "rows": 222,
+        "label_min": 0.03,
+        "label_max": 0.97,
+        "label_mean": 0.5001,
+        "label_std": 0.2091
+      }
+    }
+  }
+}
