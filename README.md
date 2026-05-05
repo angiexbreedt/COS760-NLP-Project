@@ -1,4 +1,4 @@
-# COS760 Group 16 — Semantic Relatedness Project
+# COS760 Group 16 - Semantic Relatedness Using SemRel Datasets
 **Evaluating Cross-Lingual Transfer and Data Augmentation for Semantic Relatedness in Afrikaans, Hausa and Kinyarwanda**
 
 ### 👥 Team Members
