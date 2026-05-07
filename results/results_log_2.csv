@@ -1,8 +1,0 @@
-experiment_id,model,model_variant,anguage,split,spearman_rho,mse,augmented,notes
-TL-ENG,xlmr_finetuned,xlm-roberta-base,English,test,0.8353,0.02,FALSE,Fine-tuned on English train set. Best checkpoint on dev Spearman.
-TL-2-hau,xlmr_finetuned,xlm-roberta-base,Hausa,test,0.6862,0.0404,FALSE,Fine-tuned on Hausa train set. Best checkpoint on dev Spearman.
-TL-2-kin,xlmr_finetuned,xlm-roberta-base,Kinyarwanda,test,0.6339,0.0269,FALSE,Fine-tuned on Kinyarwanda train set. Best checkpoint on dev Spearman.
-TL-1-afr,xlmr_zeroshot,xlm-roberta-base,Afrikaans,test,0.8177,0.0159,FALSE,Zero-shot: English fine-tuned checkpoint evaluated on African language.
-TL-1-hau,xlmr_zeroshot,xlm-roberta-base,Hausa,test,0.6422,0.0539,FALSE,Zero-shot: English fine-tuned checkpoint evaluated on African language.
-TL-1-kin,xlmr_zeroshot,xlm-roberta-base,Kinyarwanda,test,0.4819,0.0349,FALSE,Zero-shot: English fine-tuned checkpoint evaluated on African language.
-TL-2-kin-v2,xlmr_finetuned,xlm-roberta-base,Kinyarwanda,test,0.5887,0.0294,FALSE,Fine-tuned Kinyarwanda with 15 epochs — model still converging at epoch 10.
