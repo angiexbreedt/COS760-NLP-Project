@@ -3,3 +3,9 @@ BL-1-eng,cosine_baseline,paraphrase-multilingual-mpnet-base-v2,English,test,0.80
 BL-1-afr,cosine_baseline,paraphrase-multilingual-mpnet-base-v2,Afrikaans,test,0.7646,0.0263,False,No fine-tuning. Cosine similarity on sentence embeddings.
 BL-1-hau,cosine_baseline,paraphrase-multilingual-mpnet-base-v2,Hausa,test,0.3175,0.1346,False,No fine-tuning. Cosine similarity on sentence embeddings.
 BL-1-kin,cosine_baseline,paraphrase-multilingual-mpnet-base-v2,Kinyarwanda,test,0.3617,0.1426,False,No fine-tuning. Cosine similarity on sentence embeddings.
+TL-ENG,xlmr_finetuned,xlm-roberta-base,English,test,0.8353,0.0200,False,Fine-tuned on English train set. Best checkpoint on dev Spearman.
+TL-2-hau,xlmr_finetuned,xlm-roberta-base,Hausa,test,0.6862,0.0404,False,Fine-tuned on Hausa train set. Best checkpoint on dev Spearman.
+TL-2-kin,xlmr_finetuned,xlm-roberta-base,Kinyarwanda,test,0.6339,0.0269,False,Fine-tuned on Kinyarwanda train set. Best checkpoint on dev Spearman.
+TL-1-afr,xlmr_zeroshot,xlm-roberta-base,Afrikaans,test,0.8177,0.0159,False,Zero-shot: English fine-tuned checkpoint evaluated on African language.
+TL-1-hau,xlmr_zeroshot,xlm-roberta-base,Hausa,test,0.6422,0.0539,False,Zero-shot: English fine-tuned checkpoint evaluated on African language.
+TL-1-kin,xlmr_zeroshot,xlm-roberta-base,Kinyarwanda,test,0.4819,0.0349,False,Zero-shot: English fine-tuned checkpoint evaluated on African language.
