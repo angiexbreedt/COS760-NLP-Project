@@ -1,0 +1,1 @@
+# Training conducted in notebooks/cos760-xlmr-finetuning.ipynb and notebooks/05_augmentation.ipynb on Kaggle
