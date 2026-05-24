@@ -9,3 +9,9 @@ TL-2-kin,xlmr_finetuned,xlm-roberta-base,Kinyarwanda,test,0.6339,0.0269,False,Fi
 TL-1-afr,xlmr_zeroshot,xlm-roberta-base,Afrikaans,test,0.8177,0.0159,False,Zero-shot: English fine-tuned checkpoint evaluated on African language.
 TL-1-hau,xlmr_zeroshot,xlm-roberta-base,Hausa,test,0.6422,0.0539,False,Zero-shot: English fine-tuned checkpoint evaluated on African language.
 TL-1-kin,xlmr_zeroshot,xlm-roberta-base,Kinyarwanda,test,0.4819,0.0349,False,Zero-shot: English fine-tuned checkpoint evaluated on African language.
+TL-4-eng,afriberta_finetuned,castorini/afriberta_large,English,test,0.6561,0.0292,False,AfriBERTa fine-tuned on English train set.
+TL-4-hau,afriberta_finetuned,castorini/afriberta_large,Hausa,test,0.4756,0.0807,False,AfriBERTa fine-tuned on Hausa train set.
+TL-4-kin,afriberta_finetuned,castorini/afriberta_large,Kinyarwanda,test,0.4926,0.0366,False,AfriBERTa fine-tuned on Kinyarwanda train set.
+TL-3-afr,afriberta_zeroshot,castorini/afriberta_large,Afrikaans,test,0.5354,0.1181,False,AfriBERTa zero-shot: English fine-tuned checkpoint on African language.
+TL-3-hau,afriberta_zeroshot,castorini/afriberta_large,Hausa,test,0.3108,0.0724,False,AfriBERTa zero-shot: English fine-tuned checkpoint on African language.
+TL-3-kin,afriberta_zeroshot,castorini/afriberta_large,Kinyarwanda,test,0.3524,0.0496,False,AfriBERTa zero-shot: English fine-tuned checkpoint on African language.
