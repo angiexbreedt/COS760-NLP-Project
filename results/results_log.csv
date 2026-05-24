@@ -15,3 +15,7 @@ TL-4-kin,afriberta_finetuned,castorini/afriberta_large,Kinyarwanda,test,0.4926,0
 TL-3-afr,afriberta_zeroshot,castorini/afriberta_large,Afrikaans,test,0.5354,0.1181,False,AfriBERTa zero-shot: English fine-tuned checkpoint on African language.
 TL-3-hau,afriberta_zeroshot,castorini/afriberta_large,Hausa,test,0.3108,0.0724,False,AfriBERTa zero-shot: English fine-tuned checkpoint on African language.
 TL-3-kin,afriberta_zeroshot,castorini/afriberta_large,Kinyarwanda,test,0.3524,0.0496,False,AfriBERTa zero-shot: English fine-tuned checkpoint on African language.
+AU-1,xlmr_augmented,xlm-roberta-base,Hausa,test,0.6880,0.0434,True,XLM-R fine-tuned on original+augmented Hausa. Survival rate: 62.3%
+AU-2,afriberta_augmented,castorini/afriberta_large,Hausa,test,0.4869,0.0567,True,AfriBERTa fine-tuned on original+augmented Hausa. Survival rate: 62.3%
+AU-3,xlmr_augmented,xlm-roberta-base,Kinyarwanda,test,0.6329,0.0300,True,XLM-R fine-tuned on original+augmented Kinyarwanda. Survival rate: 99.9%
+AU-4,afriberta_augmented,castorini/afriberta_large,Kinyarwanda,test,0.4302,0.0358,True,AfriBERTa fine-tuned on original+augmented Kinyarwanda. Survival rate: 99.9%
