@@ -1,0 +1,362 @@
+6.2s 1 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+6.2s 2 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+6.2s 3 0.00s - to python to disable frozen modules.
+6.2s 4 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+6.8s 5 0.00s - Debugger warning: It seems that frozen modules are being used, which may
+6.8s 6 0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+6.8s 7 0.00s - to python to disable frozen modules.
+6.8s 8 0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+31.3s 9 Device: cuda
+31.3s 10 GPU: Tesla T4
+31.4s 11 Loading multilingual translation models...
+31.5s 12 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+31.5s 13 
+31.5s 14 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+32.8s 15 /usr/local/lib/python3.12/dist-packages/transformers/models/marian/tokenization_marian.py:176: UserWarning: Recommended: pip install sacremoses.
+32.8s 16 warnings.warn("Recommended: pip install sacremoses.")
+32.8s 17 
+32.8s 18 /usr/local/lib/python3.12/dist-packages/transformers/models/marian/tokenization_marian.py:176: UserWarning: Recommended: pip install sacremoses.
+32.8s 19 warnings.warn("Recommended: pip install sacremoses.")
+37.6s 20 The tied weights mapping and config for this model specifies to tie model.shared.weight to model.decoder.embed_tokens.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+37.6s 21 
+37.6s 22 The tied weights mapping and config for this model specifies to tie model.shared.weight to model.decoder.embed_tokens.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+37.6s 23 The tied weights mapping and config for this model specifies to tie model.shared.weight to model.encoder.embed_tokens.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+37.6s 24 
+37.6s 25 The tied weights mapping and config for this model specifies to tie model.shared.weight to model.encoder.embed_tokens.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+45.9s 26 The tied weights mapping and config for this model specifies to tie model.shared.weight to model.decoder.embed_tokens.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+45.9s 27 
+45.9s 28 The tied weights mapping and config for this model specifies to tie model.shared.weight to model.decoder.embed_tokens.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+45.9s 29 The tied weights mapping and config for this model specifies to tie model.shared.weight to model.encoder.embed_tokens.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+45.9s 30 
+45.9s 31 The tied weights mapping and config for this model specifies to tie model.shared.weight to model.encoder.embed_tokens.weight, but both are present in the checkpoints, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning
+46.3s 32 Models loaded.
+47.9s 33 Test translation: Halo, how's you?
+48.0s 34 Loading similarity model...
+54.5s 35 XLMRobertaModel LOAD REPORT from: sentence-transformers/paraphrase-multilingual-mpnet-base-v2
+54.5s 36 Key                     | Status     |  |
+54.5s 37 ------------------------+------------+--+-
+54.5s 38 embeddings.position_ids | UNEXPECTED |  |
+54.5s 39 
+54.5s 40 Notes:
+54.5s 41 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+54.5s 42 
+54.5s 43 XLMRobertaModel LOAD REPORT from: sentence-transformers/paraphrase-multilingual-mpnet-base-v2
+54.5s 44 Key                     | Status     |  |
+54.5s 45 ------------------------+------------+--+-
+54.5s 46 embeddings.position_ids | UNEXPECTED |  |
+54.5s 47 
+54.5s 48 Notes:
+54.5s 49 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+58.4s 50 Ready.
+58.4s 51 Functions defined.
+58.5s 52 The following generation flags are not valid and may be ignored: ['early_stopping']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+58.5s 53 
+58.5s 54 The following generation flags are not valid and may be ignored: ['early_stopping']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+58.6s 55 
+58.6s 56 ==================================================
+58.6s 57 Augmenting HAU (tag: hau)
+58.6s 58 ==================================================
+58.6s 59 Original training pairs: 1736
+58.6s 60 Back-translating sentence1...
+59.9s 61 Translated 0/1736...
+66.1s 62 Translated 320/1736...
+72.0s 63 Translated 640/1736...
+77.7s 64 Translated 960/1736...
+83.0s 65 Translated 1280/1736...
+88.6s 66 Translated 1600/1736...
+90.4s 67 Back-translating sentence2...
+91.5s 68 Translated 0/1736...
+97.2s 69 Translated 320/1736...
+102.7s 70 Translated 640/1736...
+108.0s 71 Translated 960/1736...
+114.2s 72 Translated 1280/1736...
+119.9s 73 Translated 1600/1736...
+121.5s 74 Quality filtering (GPU)...
+140.9s 75 Pairs generated: 1736
+140.9s 76 Pairs surviving filter: 3 (0.2%)
+140.9s 77 Saved 3 pairs → /kaggle/working/augmented/hau_augmented.csv
+140.9s 78 
+140.9s 79 Hausa done. Survival rate: 0.2%
+141.1s 80 
+141.1s 81 ==================================================
+141.1s 82 Augmenting HAU (tag: hau)
+141.1s 83 ==================================================
+141.1s 84 Original training pairs: 1736
+141.1s 85 Back-translating sentence1...
+142.2s 86 Translated 0/1736...
+148.3s 87 Translated 320/1736...
+154.2s 88 Translated 640/1736...
+160.1s 89 Translated 960/1736...
+165.6s 90 Translated 1280/1736...
+171.3s 91 Translated 1600/1736...
+173.2s 92 Back-translating sentence2...
+174.3s 93 Translated 0/1736...
+180.3s 94 Translated 320/1736...
+186.0s 95 Translated 640/1736...
+191.6s 96 Translated 960/1736...
+198.0s 97 Translated 1280/1736...
+203.9s 98 Translated 1600/1736...
+205.5s 99 Quality filtering (GPU)...
+226.4s 100 Pairs generated: 1736
+226.4s 101 Pairs surviving filter: 1081 (62.3%)
+226.4s 102 Saved 1081 pairs → /kaggle/working/augmented/hau_augmented.csv
+226.4s 103 
+226.4s 104 Hausa done. Survival rate: 62.3%
+226.6s 105 
+226.6s 106 ==================================================
+226.6s 107 Augmenting KIN (tag: kin)
+226.6s 108 ==================================================
+226.6s 109 Original training pairs: 778
+226.6s 110 Back-translating sentence1...
+227.8s 111 Translated 0/778...
+233.8s 112 Translated 320/778...
+240.0s 113 Translated 640/778...
+241.9s 114 Back-translating sentence2...
+243.0s 115 Translated 0/778...
+248.5s 116 Translated 320/778...
+254.3s 117 Translated 640/778...
+256.1s 118 Quality filtering (GPU)...
+267.9s 119 Pairs generated: 778
+267.9s 120 Pairs surviving filter: 777 (99.9%)
+267.9s 121 Saved 777 pairs → /kaggle/working/augmented/kin_augmented.csv
+267.9s 122 
+267.9s 123 Kinyarwanda done. Survival rate: 99.9%
+272.5s 124 
+272.5s 125 ============================================================
+272.5s 126 Training XLM-R + augmentation on Hausa
+272.5s 127 ============================================================
+272.5s 128 Combined: 2817 pairs
+277.3s 129 XLMRobertaModel LOAD REPORT from: xlm-roberta-base
+277.3s 130 Key                       | Status     |  |
+277.3s 131 --------------------------+------------+--+-
+277.3s 132 lm_head.dense.weight      | UNEXPECTED |  |
+277.3s 133 lm_head.layer_norm.weight | UNEXPECTED |  |
+277.3s 134 lm_head.bias              | UNEXPECTED |  |
+277.3s 135 lm_head.dense.bias        | UNEXPECTED |  |
+277.3s 136 lm_head.layer_norm.bias   | UNEXPECTED |  |
+277.3s 137 
+277.3s 138 Notes:
+277.3s 139 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+277.3s 140 
+277.3s 141 XLMRobertaModel LOAD REPORT from: xlm-roberta-base
+277.3s 142 Key                       | Status     |  |
+277.3s 143 --------------------------+------------+--+-
+277.3s 144 lm_head.dense.weight      | UNEXPECTED |  |
+277.3s 145 lm_head.layer_norm.weight | UNEXPECTED |  |
+277.3s 146 lm_head.bias              | UNEXPECTED |  |
+277.3s 147 lm_head.dense.bias        | UNEXPECTED |  |
+277.3s 148 lm_head.layer_norm.bias   | UNEXPECTED |  |
+277.3s 149 
+277.3s 150 Notes:
+277.3s 151 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+360.9s 152 Epoch  1 | loss=0.0983 | dev ρ=0.6767
+362.2s 153 ✓ New best (ρ=0.6767)
+444.9s 154 Epoch  2 | loss=0.0725 | dev ρ=0.7336
+446.8s 155 ✓ New best (ρ=0.7336)
+529.4s 156 Epoch  3 | loss=0.0595 | dev ρ=0.7630
+531.5s 157 ✓ New best (ρ=0.7630)
+613.6s 158 Epoch  4 | loss=0.0510 | dev ρ=0.7484
+695.6s 159 Epoch  5 | loss=0.0429 | dev ρ=0.7524
+778.3s 160 Epoch  6 | loss=0.0372 | dev ρ=0.7647
+780.4s 161 ✓ New best (ρ=0.7647)
+863.1s 162 Epoch  7 | loss=0.0321 | dev ρ=0.7721
+865.2s 163 ✓ New best (ρ=0.7721)
+947.4s 164 Epoch  8 | loss=0.0274 | dev ρ=0.7669
+1029.4s 165 Epoch  9 | loss=0.0233 | dev ρ=0.7669
+1111.5s 166 Epoch 10 | loss=0.0219 | dev ρ=0.7660
+1111.5s 167 Early stopping at epoch 10
+1117.2s 168 
+1117.2s 169 Best epoch: 7 | Test ρ=0.6984 | MSE=0.0470
+1117.2s 170 
+1117.2s 171 ============================================================
+1117.2s 172 Training XLM-R + augmentation on Kinyarwanda
+1117.2s 173 ============================================================
+1117.2s 174 Combined: 1555 pairs
+1117.8s 175 XLMRobertaModel LOAD REPORT from: xlm-roberta-base
+1117.8s 176 Key                       | Status     |  |
+1117.8s 177 --------------------------+------------+--+-
+1117.8s 178 lm_head.dense.weight      | UNEXPECTED |  |
+1117.8s 179 lm_head.layer_norm.weight | UNEXPECTED |  |
+1117.8s 180 lm_head.bias              | UNEXPECTED |  |
+1117.8s 181 lm_head.dense.bias        | UNEXPECTED |  |
+1117.8s 182 lm_head.layer_norm.bias   | UNEXPECTED |  |
+1117.8s 183 
+1117.8s 184 Notes:
+1117.8s 185 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+1117.8s 186 
+1117.8s 187 XLMRobertaModel LOAD REPORT from: xlm-roberta-base
+1117.8s 188 Key                       | Status     |  |
+1117.8s 189 --------------------------+------------+--+-
+1117.8s 190 lm_head.dense.weight      | UNEXPECTED |  |
+1117.8s 191 lm_head.layer_norm.weight | UNEXPECTED |  |
+1117.8s 192 lm_head.bias              | UNEXPECTED |  |
+1117.8s 193 lm_head.dense.bias        | UNEXPECTED |  |
+1117.8s 194 lm_head.layer_norm.bias   | UNEXPECTED |  |
+1117.8s 195 
+1117.8s 196 Notes:
+1117.8s 197 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+1165.0s 198 Epoch  1 | loss=0.2805 | dev ρ=0.0584
+1166.2s 199 ✓ New best (ρ=0.0584)
+1212.9s 200 Epoch  2 | loss=0.0612 | dev ρ=0.2077
+1214.8s 201 ✓ New best (ρ=0.2077)
+1261.7s 202 Epoch  3 | loss=0.0589 | dev ρ=0.3378
+1263.6s 203 ✓ New best (ρ=0.3378)
+1310.4s 204 Epoch  4 | loss=0.0506 | dev ρ=0.3921
+1312.4s 205 ✓ New best (ρ=0.3921)
+1358.7s 206 Epoch  5 | loss=0.0521 | dev ρ=0.3041
+1405.4s 207 Epoch  6 | loss=0.0444 | dev ρ=0.5112
+1407.3s 208 ✓ New best (ρ=0.5112)
+1454.2s 209 Epoch  7 | loss=0.0388 | dev ρ=0.5256
+1456.1s 210 ✓ New best (ρ=0.5256)
+1502.8s 211 Epoch  8 | loss=0.0353 | dev ρ=0.5785
+1504.7s 212 ✓ New best (ρ=0.5785)
+1551.0s 213 Epoch  9 | loss=0.0321 | dev ρ=0.5683
+1597.7s 214 Epoch 10 | loss=0.0306 | dev ρ=0.5909
+1599.6s 215 ✓ New best (ρ=0.5909)
+1602.0s 216 
+1602.0s 217 Best epoch: 10 | Test ρ=0.6432 | MSE=0.0289
+1602.0s 218 
+1602.0s 219 AU-1 Hausa XLM-R+aug:       ρ=0.6984, MSE=0.0470
+1602.0s 220 AU-3 Kinyarwanda XLM-R+aug: ρ=0.6432, MSE=0.0289
+1604.8s 221 
+1604.8s 222 ============================================================
+1604.8s 223 Training AfriBERTa + augmentation on Hausa
+1604.8s 224 ============================================================
+1604.8s 225 Combined: 2817 pairs
+1614.1s 226 XLMRobertaModel LOAD REPORT from: castorini/afriberta_large
+1614.1s 227 Key                             | Status     |
+1614.1s 228 --------------------------------+------------+-
+1614.1s 229 lm_head.dense.weight            | UNEXPECTED |
+1614.1s 230 roberta.embeddings.position_ids | UNEXPECTED |
+1614.1s 231 lm_head.layer_norm.weight       | UNEXPECTED |
+1614.1s 232 lm_head.decoder.weight          | UNEXPECTED |
+1614.1s 233 lm_head.bias                    | UNEXPECTED |
+1614.1s 234 lm_head.dense.bias              | UNEXPECTED |
+1614.1s 235 lm_head.decoder.bias            | UNEXPECTED |
+1614.1s 236 lm_head.layer_norm.bias         | UNEXPECTED |
+1614.1s 237 pooler.dense.weight             | MISSING    |
+1614.1s 238 pooler.dense.bias               | MISSING    |
+1614.1s 239 
+1614.1s 240 Notes:
+1614.1s 241 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+1614.1s 242 - MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+1614.1s 243 
+1614.1s 244 XLMRobertaModel LOAD REPORT from: castorini/afriberta_large
+1614.1s 245 Key                             | Status     |
+1614.1s 246 --------------------------------+------------+-
+1614.1s 247 lm_head.dense.weight            | UNEXPECTED |
+1614.1s 248 roberta.embeddings.position_ids | UNEXPECTED |
+1614.1s 249 lm_head.layer_norm.weight       | UNEXPECTED |
+1614.1s 250 lm_head.decoder.weight          | UNEXPECTED |
+1614.1s 251 lm_head.bias                    | UNEXPECTED |
+1614.1s 252 lm_head.dense.bias              | UNEXPECTED |
+1614.1s 253 lm_head.decoder.bias            | UNEXPECTED |
+1614.1s 254 lm_head.layer_norm.bias         | UNEXPECTED |
+1614.1s 255 pooler.dense.weight             | MISSING    |
+1614.1s 256 pooler.dense.bias               | MISSING    |
+1614.1s 257 
+1614.1s 258 Notes:
+1614.1s 259 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+1614.1s 260 - MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+1672.3s 261 Epoch  1 | loss=0.2333 | dev ρ=0.3305
+1673.0s 262 ✓ New best (ρ=0.3305)
+1728.3s 263 Epoch  2 | loss=0.1094 | dev ρ=0.4765
+1729.3s 264 ✓ New best (ρ=0.4765)
+1785.4s 265 Epoch  3 | loss=0.0864 | dev ρ=0.5651
+1786.4s 266 ✓ New best (ρ=0.5651)
+1842.1s 267 Epoch  4 | loss=0.0726 | dev ρ=0.5785
+1843.1s 268 ✓ New best (ρ=0.5785)
+1899.3s 269 Epoch  5 | loss=0.0674 | dev ρ=0.5999
+1900.3s 270 ✓ New best (ρ=0.5999)
+1956.2s 271 Epoch  6 | loss=0.0586 | dev ρ=0.6045
+1957.2s 272 ✓ New best (ρ=0.6045)
+2013.2s 273 Epoch  7 | loss=0.0470 | dev ρ=0.6317
+2014.2s 274 ✓ New best (ρ=0.6317)
+2070.3s 275 Epoch  8 | loss=0.0415 | dev ρ=0.6288
+2126.2s 276 Epoch  9 | loss=0.0374 | dev ρ=0.6209
+2181.8s 277 Epoch 10 | loss=0.0384 | dev ρ=0.6210
+2181.8s 278 Early stopping at epoch 10
+2185.8s 279 
+2185.8s 280 Best epoch: 7 | Test ρ=0.4776 | MSE=0.0606
+2185.8s 281 
+2185.8s 282 ============================================================
+2185.8s 283 Training AfriBERTa + augmentation on Kinyarwanda
+2185.8s 284 ============================================================
+2185.8s 285 Combined: 1555 pairs
+2186.8s 286 XLMRobertaModel LOAD REPORT from: castorini/afriberta_large
+2186.8s 287 Key                             | Status     |
+2186.8s 288 --------------------------------+------------+-
+2186.8s 289 lm_head.dense.weight            | UNEXPECTED |
+2186.8s 290 roberta.embeddings.position_ids | UNEXPECTED |
+2186.8s 291 lm_head.layer_norm.weight       | UNEXPECTED |
+2186.8s 292 lm_head.decoder.weight          | UNEXPECTED |
+2186.8s 293 lm_head.bias                    | UNEXPECTED |
+2186.8s 294 lm_head.dense.bias              | UNEXPECTED |
+2186.8s 295 lm_head.decoder.bias            | UNEXPECTED |
+2186.8s 296 lm_head.layer_norm.bias         | UNEXPECTED |
+2186.8s 297 pooler.dense.weight             | MISSING    |
+2186.8s 298 pooler.dense.bias               | MISSING    |
+2186.8s 299 
+2186.8s 300 Notes:
+2186.8s 301 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+2186.8s 302 - MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+2186.8s 303 
+2186.8s 304 XLMRobertaModel LOAD REPORT from: castorini/afriberta_large
+2186.8s 305 Key                             | Status     |
+2186.8s 306 --------------------------------+------------+-
+2186.8s 307 lm_head.dense.weight            | UNEXPECTED |
+2186.8s 308 roberta.embeddings.position_ids | UNEXPECTED |
+2186.8s 309 lm_head.layer_norm.weight       | UNEXPECTED |
+2186.8s 310 lm_head.decoder.weight          | UNEXPECTED |
+2186.8s 311 lm_head.bias                    | UNEXPECTED |
+2186.8s 312 lm_head.dense.bias              | UNEXPECTED |
+2186.8s 313 lm_head.decoder.bias            | UNEXPECTED |
+2186.8s 314 lm_head.layer_norm.bias         | UNEXPECTED |
+2186.8s 315 pooler.dense.weight             | MISSING    |
+2186.8s 316 pooler.dense.bias               | MISSING    |
+2186.8s 317 
+2186.8s 318 Notes:
+2186.8s 319 - UNEXPECTED	:can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+2186.8s 320 - MISSING	:those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+2218.0s 321 Epoch  1 | loss=0.1245 | dev ρ=0.3139
+2218.7s 322 ✓ New best (ρ=0.3139)
+2250.0s 323 Epoch  2 | loss=0.0671 | dev ρ=0.3942
+2251.0s 324 ✓ New best (ρ=0.3942)
+2282.3s 325 Epoch  3 | loss=0.0505 | dev ρ=0.5270
+2283.3s 326 ✓ New best (ρ=0.5270)
+2314.5s 327 Epoch  4 | loss=0.0456 | dev ρ=0.5458
+2315.5s 328 ✓ New best (ρ=0.5458)
+2346.7s 329 Epoch  5 | loss=0.0350 | dev ρ=0.5357
+2377.9s 330 Epoch  6 | loss=0.0354 | dev ρ=0.5776
+2378.9s 331 ✓ New best (ρ=0.5776)
+2410.1s 332 Epoch  7 | loss=0.0273 | dev ρ=0.6095
+2411.1s 333 ✓ New best (ρ=0.6095)
+2442.3s 334 Epoch  8 | loss=0.0241 | dev ρ=0.6018
+2473.5s 335 Epoch  9 | loss=0.0225 | dev ρ=0.5996
+2504.6s 336 Epoch 10 | loss=0.0214 | dev ρ=0.6093
+2504.6s 337 Early stopping at epoch 10
+2506.2s 338 
+2506.2s 339 Best epoch: 7 | Test ρ=0.3951 | MSE=0.0370
+2506.2s 340 
+2506.2s 341 AU-2 Hausa AfriBERTa+aug:       ρ=0.4776, MSE=0.0606
+2506.2s 342 AU-4 Kinyarwanda AfriBERTa+aug: ρ=0.3951, MSE=0.0370
+2506.3s 343 
+2506.3s 344 ✓ Augmentation results:
+2506.3s 345 experiment_id    language  spearman_rho    mse
+2506.3s 346 AU-1       Hausa        0.6984 0.0470
+2506.3s 347 AU-2       Hausa        0.4776 0.0606
+2506.3s 348 AU-3 Kinyarwanda        0.6432 0.0289
+2506.3s 349 AU-4 Kinyarwanda        0.3951 0.0370
+2506.3s 350 
+2506.3s 351 ✓ Hausa augmentation survival rate: 62.3%
+2506.3s 352 ✓ Kinyarwanda augmentation survival rate: 99.9%
+2506.3s 353 
+2506.3s 354 Download results_log.csv and augmented CSVs from Output panel.
+2511.7s 355 /usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+2511.7s 356 cells[i][c] = re.sub('\\\\\|', '|', cell)
+2511.8s 357 /usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+2511.8s 358 text = re.sub(r'_', '\_', text) # Escape underscores in display text
+2512.4s 359 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+2512.9s 360 [NbConvertApp] Writing 710959 bytes to __notebook__.ipynb
+2515.3s 361 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+2516.3s 362 [NbConvertApp] Writing 925809 bytes to __results__.html
