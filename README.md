@@ -47,31 +47,35 @@ Using the **SemRel dataset**, we evaluate:
 ## Project Structure
 
 ```
-cos760_group16/
+COS760-NLP-Project/
 ├── data/
-│   ├── raw/
-│   │   ├── afr/        # Afrikaans (dev.csv, test.csv)
-│   │   ├── eng/        # English (train.csv, dev.csv, test.csv)
-│   │   ├── hau/        # Hausa (train.csv, dev.csv, test.csv)
-│   │   ├── kin/        # Kinyarwanda (train.csv, dev.csv, test.csv)
+│   ├── raw/                        # SemRel dataset splits (CSV format)
+│   │   ├── afr/  dev.csv, test.csv
+│   │   ├── eng/  train.csv, dev.csv, test.csv
+│   │   ├── hau/  train.csv, dev.csv, test.csv
+│   │   ├── kin/  train.csv, dev.csv, test.csv
 │   │   └── dataset_summary.json
-│   └── augmented/      # Back-translated data (generated in Phase 4)
+│   └── augmented/                  # Back-translated data (see README inside)
 ├── notebooks/
-│   ├── 01_eda.ipynb            # Phase 1.4: Exploratory data analysis
-│   ├── 02_baseline.ipynb       # Phase 2.1: Cosine similarity baseline
-│   └── 03_error_analysis.ipynb # Phase 5.2: Error analysis
+│   ├── 01_eda.ipynb                # Exploratory data analysis
+│   ├── 02_baseline.ipynb           # Cosine similarity baseline
+│   ├── 03-xlmr-finetuning.ipynb   # XLM-R fine-tuning (run on Kaggle GPU)
+│   ├── 04-afriberta.ipynb          # AfriBERTa fine-tuning (run on Kaggle GPU)
+│   └── 05-augmentation.ipynb       # Back-translation augmentation (run on Kaggle GPU)
 ├── src/
-│   ├── train.py        # Fine-tuning loop (XLM-R / AfriBERTa)
-│   ├── evaluate.py     # Shared evaluation function
-│   └── augment.py      # Back-translation augmentation pipeline
+│   ├── evaluate.py                 # Shared evaluation module (Spearman ρ, MSE, logging)
+│   ├── train.py                    # Training reference (see notebooks for full implementation)
+│   └── augment.py                  # Augmentation reference (see notebooks for full implementation)
 ├── results/
-│   └── results_log.csv # All experiment outputs (auto-populated)
-├── checkpoints/        # Saved model checkpoints
-├── report/             # Final report .docx
+│   ├── results_log.csv             # All experiment results (19 experiments)
+│   ├── dataset_statistics.csv      # EDA statistics per language/split
+│   ├── fig1_score_distributions.png
+│   ├── fig2_sentence_lengths.png
+│   └── fig3_baseline_results.png
 ├── requirements.txt
 └── README.md
 ```
-
+--- 
 ## Dataset
 
 All data comes from the [SemRel2024 dataset](https://huggingface.co/datasets/SemRel/SemRel2024)
@@ -80,52 +84,73 @@ All data comes from the [SemRel2024 dataset](https://huggingface.co/datasets/Sem
 | Language    | Code | Train | Dev | Test |
 |-------------|------|-------|-----|------|
 | English     | eng  | 5500  | 250 | 2600 |
-| Afrikaans   | afr  | —     | 375 | 375  |
+| Afrikaans   | afr  | -     | 375 | 375  |
 | Hausa       | hau  | 1736  | 212 | 603  |
 | Kinyarwanda | kin  | 778   | 102 | 222  |
 
 > **Note on Afrikaans:** No training split exists. Zero-shot cross-lingual transfer only.
 
+---
 ## Installation
-
+ 
 ```bash
+git clone https://github.com/angiexbreedt/COS760-NLP-Project.git
+cd COS760-NLP-Project
 pip install -r requirements.txt
 ```
-
-## Running the Code
-
-### 1. EDA (Phase 1)
-```bash
-jupyter notebook notebooks/01_eda.ipynb
+ 
+On Windows:
+```powershell
+py -m pip install -r requirements.txt
 ```
+ 
+---
 
-### 2. Baseline (Phase 2)
+## Running the Experiments
+ 
+### 1. Exploratory Data Analysis (local, no GPU needed)
 ```bash
-python src/evaluate.py --model cosine --lang eng
+py -m notebook notebooks/01_eda.ipynb
 ```
-
-### 3. Fine-tuning (Phase 3)
+Produces score distribution plots, sentence length histograms, and dataset statistics saved to `results/`.
+ 
+### 2. Cosine Similarity Baseline (local, no GPU needed)
 ```bash
-# Fine-tune XLM-R on English
-python src/train.py --model xlmr --lang eng --epochs 10
-
-# Evaluate zero-shot on Afrikaans, Hausa, Kinyarwanda
-python src/evaluate.py --model xlmr --checkpoint checkpoints/xlmr_eng_best --lang afr
-python src/evaluate.py --model xlmr --checkpoint checkpoints/xlmr_eng_best --lang hau
-python src/evaluate.py --model xlmr --checkpoint checkpoints/xlmr_eng_best --lang kin
+py -m notebook notebooks/02_baseline.ipynb
 ```
-
-### 4. Augmentation (Phase 4)
-```bash
-python src/augment.py --lang hau --quality_threshold 0.75
-python src/augment.py --lang kin --quality_threshold 0.75
-```
+Runs the unsupervised baseline on all four languages and logs results to `results/results_log.csv`.
+ 
+### 3. XLM-R Fine-Tuning (requires GPU - run on Kaggle)
+Open `notebooks/03-xlmr-finetuning.ipynb` on Kaggle with GPU T4 x2 enabled.  
+Trains XLM-R on English, Hausa, and Kinyarwanda. Evaluates zero-shot on all African languages.
+ 
+### 4. AfriBERTa Fine-Tuning (requires GPU - run on Kaggle)
+Open `notebooks/04-afriberta.ipynb` on Kaggle with GPU T4 x2 enabled.  
+Trains AfriBERTa on English, Hausa, and Kinyarwanda. Evaluates zero-shot on all African languages.
+ 
+### 5. Data Augmentation (requires GPU - run on Kaggle)
+Open `notebooks/05-augmentation.ipynb` on Kaggle with GPU T4 x2 enabled.  
+Performs back-translation augmentation for Hausa and Kinyarwanda, retrains XLM-R and AfriBERTa.
+ 
+**Note:** Notebooks 3–5 require a Kaggle account with phone verification for GPU access. The SemRel dataset must be uploaded as a Kaggle dataset named `semrel2024-raw`.
+ 
+---
 
 ## Results
 
-All results are logged to `results/results_log.csv` automatically. 
-See the final report (`report/`) for the full results table and analysis.
-
+All results logged in `results/results_log.csv`.
+Key results:
+ 
+| Experiment | Model | Language | Spearman ρ |
+|---|---|---|---|
+| BL-1 | Cosine baseline | Afrikaans | 0.7646 |
+| TL-1 | XLM-R zero-shot | Afrikaans | **0.8177** |
+| TL-2 | XLM-R fine-tuned | Hausa | 0.6862 |
+| TL-2 | XLM-R fine-tuned | Kinyarwanda | 0.6339 |
+| AU-1 | XLM-R + augmentation | Hausa | 0.6880 |
+ 
+See the full report (`report/Group16_u23542838.pdf`) for complete results and analysis.
+ 
 ---
 
 ## ⚙️ Setup Instructions
@@ -148,11 +173,31 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Quick Start (Baseline)
-Run baseline semantic similarity using pretrained embeddings:
-
-python src/baseline.py
-
+## Evaluation Module
+ 
+`src/evaluate.py` provides reusable functions for running inference and logging results:
+ 
+```python
+from src.evaluate import evaluate_and_log, print_results_summary
+ 
+# Print all logged results
+print_results_summary()
+ 
+# Evaluate a model and log results
+evaluate_and_log(model, tokenizer, 
+                 lang_code='hau', lang_name='Hausa',
+                 split='test', experiment_id='TL-2-hau',
+                 model_name='xlmr_finetuned',
+                 model_variant='xlm-roberta-base')
+```
+ 
+---
+ 
+## Checkpoints
+ 
+Model checkpoints are saved as Kaggle notebook output versions and are not tracked in this repository due to file size constraints (~1GB per checkpoint). To reproduce:
+- Run the relevant Kaggle notebook
+- Checkpoints are saved to `/kaggle/working/checkpoints/` during the session
 ---
 
 ## 🧪 Experiments
@@ -172,14 +217,13 @@ python src/baseline.py
 
 ## References
 
-Abdulmumin, I., et al. (2024). SemRel: A collection of semantic textual 
-relatedness datasets for 13 languages. In *Proceedings of ACL 2024*.
-
-Conneau, A., et al. (2020). Unsupervised cross-lingual representation 
-learning at scale. In *Proceedings of ACL 2020*.
-
-Alabi, J., et al. (2022). Adapting pretrained language models to African 
-languages via multilingual adaptive fine-tuning. In *Proceedings of COLING 2022*.
+Abdulmumin, I., et al. (2024). SemRel: A collection of semantic textual relatedness datasets for 13 languages. *ACL 2024*.
+ 
+Conneau, A., et al. (2020). Unsupervised cross-lingual representation learning at scale. *ACL 2020*.
+ 
+Alabi, J., et al. (2022). Adapting pretrained language models to African languages via multilingual adaptive fine-tuning. *COLING 2022*.
+ 
+Reimers, N. and Gurevych, I. (2019). Sentence-BERT: Sentence embeddings using Siamese BERT-networks. *EMNLP 2019*.
 
 
 
