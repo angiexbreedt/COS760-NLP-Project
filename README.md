@@ -147,7 +147,7 @@ Key results:
 | TL-1 | XLM-R zero-shot | Afrikaans | **0.8177** |
 | TL-2 | XLM-R fine-tuned | Hausa | 0.6862 |
 | TL-2 | XLM-R fine-tuned | Kinyarwanda | 0.6339 |
-| AU-1 | XLM-R + augmentation | Hausa | 0.6880 |
+| AU-1 | XLM-R + augmentation | Hausa | 0.6984 |
  
 See the full report (`report/Group16_u23542838.pdf`) for complete results and analysis.
  
