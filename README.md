@@ -43,7 +43,30 @@ Using the **SemRel dataset**, we evaluate:
 - Mean Squared Error (MSE)
 
 ---
+## Contents of the Zip File
 
+| File / Directory | Description |
+|---|---|
+| `README.md` | This file |
+| `requirements.txt` | Python package dependencies |
+| `Group16_u23542838.pdf` | Final project report |
+| `notebooks/01_eda.ipynb` | Exploratory data analysis - score distributions, sentence lengths, dataset statistics |
+| `notebooks/02_baseline.ipynb` | Cosine similarity baseline - runs on all 4 languages locally |
+| `notebooks/03-xlmr-finetuning.ipynb` | XLM-R fine-tuning and zero-shot evaluation - run on Kaggle GPU |
+| `notebooks/04-afriberta.ipynb` | AfriBERTa fine-tuning and zero-shot evaluation - run on Kaggle GPU |
+| `notebooks/05-augmentation.ipynb` | Back-translation augmentation and retraining - run on Kaggle GPU |
+| `src/evaluate.py` | Shared evaluation module (Spearman ρ, MSE, results logging) |
+| `src/train.py` | Training reference script |
+| `src/augment.py` | Augmentation reference script |
+| `data/raw/` | SemRel dataset splits in CSV format for all 4 languages |
+| `data/augmented/` | Augmented data directory - see README inside for regeneration instructions |
+| `results/results_log.csv` | All 19 experiment results |
+| `results/dataset_statistics.csv` | EDA statistics per language and split |
+| `results/fig1_score_distributions.png` | Score distribution plots per language |
+| `results/fig2_sentence_lengths.png` | Sentence length distributions per language |
+| `results/fig3_baseline_results.png` | Baseline performance bar chart |
+
+---
 ## Project Structure
 
 ```
@@ -80,6 +103,10 @@ COS760-NLP-Project/
 
 All data comes from the [SemRel2024 dataset](https://huggingface.co/datasets/SemRel/SemRel2024)
 (Abdulmumin et al., 2024), downloaded from Hugging Face.
+
+> **Note:** The raw data is included directly in this zip under `data/raw/`. 
+> No download script is required. The original dataset can also be accessed at 
+> https://huggingface.co/datasets/SemRel/SemRel2024
 
 | Language    | Code | Train | Dev | Test |
 |-------------|------|-------|-----|------|
@@ -178,21 +205,6 @@ evaluate_and_log(model, tokenizer,
 Model checkpoints are saved as Kaggle notebook output versions and are not tracked in this repository due to file size constraints (~1GB per checkpoint). To reproduce:
 - Run the relevant Kaggle notebook
 - Checkpoints are saved to `/kaggle/working/checkpoints/` during the session
----
-
-## 🧪 Experiments
-- Baseline (no training)
-- Fine-tuned models
-- Cross-lingual evaluation
-- Data augmentation experiments
-
----
-
-## ⚠️ Challenges
-- Limited data for some languages
-- Translation quality for augmentation
-- Computational constraints
-
 ---
 
 ## References
